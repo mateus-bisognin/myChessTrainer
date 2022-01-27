@@ -15,10 +15,14 @@ const pieceUnicode = {
 };
 
 class ASCIIBoard {
-  constructor() {
-    // const position = fen.split(" ")[0];
-    // const colorToMove = fen.split(" ")[1] || null;
-    const position = "7p/6Q1/8/8/8/8/8/8";
+  constructor(fen) {
+    const split = fen.split(" ");
+    const fen0 = split[0];
+    const fen1 = split[1] || null;
+    const colorToMove = String(fen1).toLowerCase();
+    const position = colorToMove == "b" ? fen0.reverse() : fen0;
+
+    // const position = "7p/6Q1/8/8/8/8/8/8";
     const ranks = position.split("/");
 
     const mainDiv = document.querySelector("div.asciiChess");
