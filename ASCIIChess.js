@@ -20,7 +20,8 @@ class ASCIIBoard {
     const fen0 = split[0];
     const fen1 = split[1] || null;
     const colorToMove = String(fen1).toLowerCase();
-    const position = colorToMove == "b" ? fen0.reverse() : fen0;
+    const position =
+      colorToMove == "b" ? fen0.split("").reverse().join("") : fen0;
 
     // const position = "7p/6Q1/8/8/8/8/8/8";
     const ranks = position.split("/");
