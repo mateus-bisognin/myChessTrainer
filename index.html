@@ -44,8 +44,11 @@
   <script src="Config.js"></script>
   <script src="Challenge1d.js"></script>
   <script>
+    const queryParams = new URLSearchParams(window.location.search);
+    const position = queryParams.get("position");
+
     const config = {
-      position: "start",
+      position: position || "start",
       showNotation: false,
       draggable: true,
     };
