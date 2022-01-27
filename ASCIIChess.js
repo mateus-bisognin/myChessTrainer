@@ -16,13 +16,13 @@ const pieceUnicode = {
 
 class ASCIIBoard {
   constructor(fen) {
-    // const split = fen.split(" ");
-    // const fen0 = split[0];
-    // const fen1 = split[1] || null;
-    // const colorToMove = String(fen1).toLowerCase();
-    // const position = colorToMove == "b" ? fen0.reverse() : fen0;
+    const split = fen.split(" ");
+    const fen0 = split[0];
+    const fen1 = split[1] || null;
+    const colorToMove = String(fen1).toLowerCase();
+    const position = colorToMove == "b" ? fen0.reverse() : fen0;
 
-    const position = "7p/6Q1/8/8/8/8/8/8";
+    // const position = "7p/6Q1/8/8/8/8/8/8";
     const ranks = position.split("/");
 
     const mainDiv = document.querySelector("div.asciiChess");
