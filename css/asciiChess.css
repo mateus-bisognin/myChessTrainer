@@ -1,6 +1,7 @@
 div.asciiChess {
   display: flex;
   flex-direction: column;
+  margin: auto;
 }
 
 div.boardRank {
