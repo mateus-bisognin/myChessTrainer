@@ -74,5 +74,11 @@
       }).setupChallenge();
 
     document.querySelector("#Flip").onclick = () => board1.flip();
+    jQuery("#board1").on(
+      "scroll touchmove touchend touchstart contextmenu",
+      function (e) {
+        e.preventDefault();
+      }
+    );
   </script>
 </html>
