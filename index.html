@@ -15,6 +15,7 @@
   <link rel="stylesheet" href="css/styles.css" />
   <link rel="stylesheet" href="css/toggleButton.css" />
   <link rel="stylesheet" href="css/select.css" />
+  <link rel="stylesheet" href="css/asciiChess.css" />
   <style type="text/css">
     html {
       overflow: hidden;
@@ -35,10 +36,14 @@
   </style>
   <body>
     <div class="main">
-      <div class="currentGame" style="width: 100%; margin: auto">
+      <div
+        class="currentGame"
+        style="width: 100%; max-width: 600px; margin: auto"
+      >
         <div id="board1"></div>
         <div class="playData"></div>
       </div>
+      <div class="asciiChess"></div>
       <div class="buttons">
         <button type="button" id="Flip">Girar o tabuleiro</button>
         <button type="button" id="JogarColunas">Jogar Colunas</button>
@@ -58,6 +63,7 @@
     crossorigin="anonymous"
   ></script>
   <script src="Board.js"></script>
+  <script src="ASCIIChess.js"></script>
   <script src="Config.js"></script>
   <script src="Challenge1d.js"></script>
   <script>
@@ -97,5 +103,7 @@
         e.preventDefault();
       }
     );
+
+    const asciiBoard = new ASCIIBoard(position);
   </script>
 </html>

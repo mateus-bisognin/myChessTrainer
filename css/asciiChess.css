@@ -1,0 +1,33 @@
+div.asciiChess {
+  display: flex;
+  flex-direction: column;
+}
+
+div.boardRank {
+  display: flex;
+  flex-direction: row;
+}
+
+p.asciiChess {
+  display: inline-block;
+  height: 1em;
+  width: 1em;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 50px;
+  margin: 0px;
+  margin-block-start: 0px;
+  margin-block-end: 0px;
+  text-align: center;
+  vertical-align: center;
+}
+
+p.asciiChess.dark {
+  background-color: #eff0f1;
+}
+p.asciiChess.dark.blank {
+  color: #eff0f1;
+}
+
+p.asciiChess.light.blank {
+  color: #ffffff;
+}
